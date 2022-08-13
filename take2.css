@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.navBar>ul {
+    display: flex;
+    align-items: center;
+    /*height: 40px;*/
+    gap: 30px;
+    justify-content: end;
+ }
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #4f4f4f;
+    width: 60px;
+    font-family: sans-serif;
+}
+
+img {
+    height: 35px;
+    width: auto;
+}
+
+span {
+    display: block;
+    border: solid 1px blue;
+}
+
+input {
+    position: absolute;
+    /*opacity: 0;*/
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+#input_1:checked ~ .dropdownMenu {
+    max-height: 500px; /*   figure out  */
+    border: solid 1px red;
+    top: 60px;
+    right: 40px;
+    gap: 30px;
+    margin: 15px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(4, 40px) 15px repeat(2, 40px);
+    font-size: 12px;
+    text-align: center;
+}
+
+.dropdownMenu {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+#input_2 {
+    height: 20px;
+    width: 240px;
+}
+
+.dropdownMenu__collapsiblePart {
+      max-height: 0;
+display: none;
+}
+
+#input_2:checked ~ .dropdownMenu__collapsiblePart {
+    max-height: 500px; /*   figure out  */
+    border: solid 1px green;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(2, 40px);
+    /*font-size: 12px;*/
+    /*text-align: center;*/
+}
+
+
+/*.dropdownMenu__collapsiblePart {*/
+/*    border: solid 1px blue;*/
+/*    grid-template-columns: repeat(3, 60px);*/
+/*    grid-template-rows: repeat(2, 40px);
+}*/
+
+/*.dropdownMenu::-webkit-scrollbar {*/
+/*    width: 0;*/
+/*}*/
+
+
+
+
