@@ -33,6 +33,11 @@ img {
     width: auto;
 }
 
+img[src="icons/bell.png"] {
+    height: 28px !important;
+    width: 28px !important;
+}
+
 /*.navBar__item:nth-last-child(2)>img {*/
 /*    height: 5px;*/
 /*    width: auto;*/
@@ -86,7 +91,6 @@ input {
 }
 
 #input_2:checked ~ .showMoreButton {
-    visibility:none;
 }
 
 #input_2 {
