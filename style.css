@@ -10,17 +10,21 @@
     /*height: 40px;*/
     gap: 30px;
     justify-content: end;
+    margin: 20px 40px 0 0;
  }
 
 ul, li {
     list-style: none;
 }
 
-a {
+a, span {
     text-decoration: none;
-    color: #6f6f6f;
+    color: #4f4f4f;
     width: 60px;
     font-family: sans-serif;
+}
+
+li:hover {
 }
 
 img {
@@ -28,24 +32,35 @@ img {
     width: auto;
 }
 
+/*.navBar__item:nth-last-child(2)>img {*/
+/*    height: 5px;*/
+/*    width: auto;*/
+/*}*/
+
 span {
     display: block;
-    border: solid 1px blue;
+    /*border: solid 1px blue;*/
 }
 
 input {
     position: absolute;
     opacity: 0;
-    height: 30px;
-    width: 30px;
+    height: 37px;
+    width: 37px;
     cursor: pointer;
+}
+
+.dropdownMenu>ul {
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
 }
 
 #input_1:checked ~ .dropdownMenu>ul {
     max-height: 500px; /*   figure out  */
-    border: solid 1px red;
+    /*border: solid 1px red;*/
     top: 60px;
-    right: 40px;
+    right: 52px;
     gap: 30px;
     margin: 15px;
     position: absolute;
@@ -56,26 +71,25 @@ input {
     text-align: center;
 }
 
-.dropdownMenu>ul {
-    max-height: 0;
-    overflow: hidden;
-    position: absolute;
+#input_1:checked ~ .dropdownMenu>ul>li:nth-child(13) {
+    grid-column: span 3;
+    background: #9f9f9f;
 }
 
 #input_2 {
     height: 20px;
     width: 240px;
-    border: solid 1px red;
+    /*border: solid 1px red;*/
 }
 
 .dropdownMenu__collapsiblePart {
-      max-height: 0;
-display: none;
+    max-height: 0;
+    display: none;
 }
 
 #input_2:checked ~ .dropdownMenu__collapsiblePart {
     max-height: 500px; /*   figure out  */
-    border: solid 1px green;
+    /*border: solid 1px green;*/
     gap: 30px;
     display: grid;
     grid-template-columns: repeat(3, 60px);
@@ -84,17 +98,6 @@ display: none;
     /*text-align: center;*/
 }
 
-
-/*.dropdownMenu__collapsiblePart {*/
-/*    border: solid 1px blue;*/
-/*    grid-template-columns: repeat(3, 60px);*/
-/*    grid-template-rows: repeat(2, 40px);
-}*/
-
-/*.dropdownMenu::-webkit-scrollbar {*/
-/*    width: 0;*/
-/*}*/
-
-
-
-
+.dropdownMenu::-webkit-scrollbar {
+    width: 0;
+}
