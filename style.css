@@ -50,10 +50,11 @@ span {
 
 input {
     position: absolute;
-    opacity: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
     height: 37px;
     width: 37px;
-    cursor: pointer;
 }
 
 .dropdownMenu>ul {
@@ -83,7 +84,7 @@ input {
     display: block;
 }
 
-#input_1:checked ~ .dropdownMenu>ul>li:nth-child(13) {
+/*#input_1:checked ~ */.dropdownMenu>ul>li:nth-child(13) {
     grid-column: span 3;
     background: lightgrey;
     height: 20px;
@@ -96,7 +97,7 @@ input {
 #input_2 {
     height: 20px;
     width: 240px;
-    /*border: solid 1px red;*/
+    right: 0;
 }
 
 .dropdownMenu__collapsiblePart {
