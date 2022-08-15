@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    list-style: none;
 }
 
 .navBar>ul {
@@ -13,10 +14,6 @@
     margin: 20px 40px 0 0;
  }
 
-ul, li {
-    list-style: none;
-}
-
 a, span {
     text-decoration: none;
     color: #4f4f4f;
@@ -24,8 +21,12 @@ a, span {
     font-family: sans-serif;
 }
 
-li:hover {
+ul>li:hover {
     border: solid 1px gray;
+}
+
+li .navBar__item_3{
+     pointer-events: none !important;
 }
 
 img {
@@ -55,6 +56,10 @@ input {
     cursor: pointer;
     height: 37px;
     width: 37px;
+}
+
+label {
+    display: block;
 }
 
 .dropdownMenu>ul {
@@ -100,6 +105,21 @@ input {
     right: 0;
 }
 
+/*.collapsiblePartContainer {*/
+/*    position: relative;*/
+/*}*/
+
+.labelTwo:before {
+    content: "More";
+    color: #4f4f4f;
+    font-family: sans-serif;
+    bottom:0;
+}
+
+#input_2:checked + .labelTwo:before {
+    content: 'Less';
+}
+
 .dropdownMenu__collapsiblePart {
     max-height: 0;
     display: none;
@@ -117,16 +137,9 @@ input {
     /*text-align: center;*/
 }
 
-/*#input_2:checked ~ #input_2:checked ~ .dropdownMenu>ul {*/
-/*    overflow-y: scroll;*/
-/*    overflow-x: hidden;*/
-/*}*/
 
-/*.dropdownMenu::-webkit-scrollbar {*/
-/*    width: 0;*/
-/*}*/
-
-/**:focus{*/
-/*    border: solid 1px red;*/
-/*}*/
-
+.labelTwo:before {
+    content: "More";
+    color: #4f4f4f;
+    font-family: sans-serif;
+}
