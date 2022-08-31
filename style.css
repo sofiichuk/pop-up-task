@@ -3,24 +3,13 @@
     padding: 0;
     border: 0;
     list-style: none;
-}
-
-.navBar>ul {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    justify-content: end;
-    margin: 20px 40px 0 0;
- }
-
-a, span {
     text-decoration: none;
     color: #4f4f4f;
-    width: 60px;
     font-family: sans-serif;
+    box-sizing: border-box;
 }
 
-span {
+a, span, label {
     display: block;
 }
 
@@ -30,8 +19,10 @@ img {
 }
 
 img[src="icons/bell.png"] {
-    height: 28px !important;
-    width: 28px !important;
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top:4px;
 }
 
 input {
@@ -43,40 +34,43 @@ input {
     width: 37px;
 }
 
-label {
-    display: block;
+.navBar {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    justify-content: end;
+    margin: 20px 60px 0 0;
 }
 
-.dropdownMenu>ul {
+.navBar__item>a, #label_1{
+    height:35px;
+    width: 60px;
+}
+
+.item_txt>a{
+ padding-top: 8px;
+}
+
+.dropdownMenu > ul {
     max-height: 0;
     display: none;
     position: absolute;
 }
 
-#input_1:checked ~ .dropdownMenu>ul {
+#input_1:checked ~ .dropdownMenu > ul {
     max-height: 500px;
     top: 60px;
     right: 52px;
     gap: 30px;
     margin: 15px;
+    padding: 15px;
     position: absolute;
     display: grid;
     grid-template-columns: repeat(3, 60px);
-    grid-template-rows: repeat(4, 40px) 15px repeat(2, 40px);
+    grid-template-rows: repeat(4, 40px) repeat(2, 40px);
     font-size: 12px;
     text-align: center;
-}
-
-.showMoreButton {
-    width: 240px;
-    display: block;
-}
-
-.dropdownMenu>ul>li:nth-child(13) {
-    grid-column: span 3;
-    background: lightgrey;
-    height: 20px;
-    line-height: 20px;
 }
 
 #input_2 {
@@ -85,15 +79,33 @@ label {
     right: 0;
 }
 
+.showMoreButton:focus {
+    tab-index: 0;
+}
+
 .label_2:before {
     content: "More";
     color: #4f4f4f;
     font-family: sans-serif;
-    bottom:0;
+    bottom: 0;
+    width: 240px;
+    display: block;
+    grid-column: span 3;
+    background: lightgrey;
+    height: 20px;
+    line-height: 20px;
+    cursor: pointer;
 }
 
-#input_2:checked ~ .label_2:before {
-    content: 'Less';
+.showMoreButton {
+    bottom: 0;
+    width: 240px;
+    height: 20px;
+}
+
+#input_2:checked + .label_2, #input_2 {
+    display: none;
+    cursor: none;
 }
 
 .dropdownMenu__collapsiblePart {
@@ -107,9 +119,19 @@ label {
     display: grid;
     grid-template-columns: repeat(3, 60px);
     grid-template-rows: repeat(2, 40px);
-    margin-top: 20px;
 }
 
-li:hover {
-    border: solid 1px gray;
+a:hover,
+label:hover { outline: 1px black solid;
+    position: relative;
+}
+
+a:focus,
+.item_btn:focus,
+.showMoreButton:focus-visible{ outline: 3px red solid;
+    position: relative;
+}
+
+label{
+    width:100%;
 }
