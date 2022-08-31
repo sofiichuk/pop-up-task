@@ -9,6 +9,25 @@
     box-sizing: border-box;
 }
 
+.navBar {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    justify-content: end;
+    margin: 20px 60px 0 0;
+    position: relative;
+}
+
+.navBar__item > a, #label_1 {
+    height: 35px;
+    width: 60px;
+}
+
+.item_txt > a {
+    padding-top: 8px;
+}
+
 a, span, label {
     display: block;
 }
@@ -39,25 +58,6 @@ input {
     right: 140px;
 }
 
-.navBar {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
-    justify-content: end;
-    margin: 20px 60px 0 0;
-    position: relative;
-}
-
-.navBar__item > a, #label_1 {
-    height: 35px;
-    width: 60px;
-}
-
-.item_txt > a {
-    padding-top: 8px;
-}
-
 .dropdownMenu > ul {
     max-height: 0;
     display: none;
@@ -83,7 +83,6 @@ input {
     height: 20px;
     width: 240px;
     left: 15px;
-    outline: 2px red solid;
 }
 
 #label_2:before {
@@ -100,13 +99,8 @@ input {
     position: absolute;
 }
 
-.showMoreButton {
-    bottom: 0;
-    width: 240px;
-    height: 20px;
-}
-
-#input_2:checked + #label_2, #input_2:checked {
+#input_2:checked + #label_2:before, #input_2:checked {
+    height: 0;
     opacity: 0;
     cursor: none;
 }
@@ -126,11 +120,9 @@ input {
 
 a:hover, input:hover {
     outline: 1px black solid;
-    position: relative;
 }
 
 a:focus {
     outline: 2px black solid;
     border-radius: 1px;
-    position: relative;
 }
