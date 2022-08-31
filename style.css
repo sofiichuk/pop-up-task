@@ -19,10 +19,14 @@ img {
 }
 
 img[src="icons/bell.png"] {
-    height: 30px;
-    width: 30px;
+    height: 28px;
+    width: 28px;
     position: relative;
-    top:4px;
+    top: 4px;
+}
+
+.item_btn {
+    position: relative;
 }
 
 input {
@@ -30,8 +34,12 @@ input {
     appearance: none;
     -webkit-appearance: none;
     cursor: pointer;
-    height: 37px;
-    width: 37px;
+}
+
+#input_1 {
+    height: 35px;
+    width: 60px;
+    right: 0;
 }
 
 .navBar {
@@ -43,13 +51,13 @@ input {
     margin: 20px 60px 0 0;
 }
 
-.navBar__item>a, #label_1{
-    height:35px;
+.navBar__item > a, #label_1 {
+    height: 35px;
     width: 60px;
 }
 
-.item_txt>a{
- padding-top: 8px;
+.item_txt > a {
+    padding-top: 8px;
 }
 
 .dropdownMenu > ul {
@@ -60,8 +68,8 @@ input {
 
 #input_1:checked ~ .dropdownMenu > ul {
     max-height: 500px;
-    top: 60px;
-    right: 52px;
+    top: 30px;
+    right: -120px;
     gap: 30px;
     margin: 15px;
     padding: 15px;
@@ -122,16 +130,19 @@ input {
 }
 
 a:hover,
-label:hover { outline: 1px black solid;
+label:hover {
+    outline: 1px black solid;
     position: relative;
 }
 
 a:focus,
 .item_btn:focus,
-.showMoreButton:focus-visible{ outline: 2px black solid;
+.showMoreButton:focus-visible {
+    outline: 2px black solid;
+    border-radius: 1px;
     position: relative;
 }
 
-label{
-    width:100%;
+label {
+    width: 100%;
 }
