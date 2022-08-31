@@ -39,10 +39,6 @@ input {
     right: 140px;
 }
 
-label {
-    width: 100%;
-}
-
 .navBar {
     display: flex;
     align-items: center;
@@ -87,6 +83,7 @@ label {
     height: 20px;
     width: 240px;
     left: 15px;
+    outline: 2px red solid;
 }
 
 #label_2:before {
@@ -127,7 +124,7 @@ label {
     grid-template-rows: repeat(2, 40px);
 }
 
-a:hover {
+a:hover, input:hover {
     outline: 1px black solid;
     position: relative;
 }
