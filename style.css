@@ -25,10 +25,6 @@ img[src="icons/bell.png"] {
     top: 4px;
 }
 
-.item_btn {
-    position: relative;
-}
-
 input {
     position: absolute;
     appearance: none;
@@ -39,7 +35,11 @@ input {
 #input_1 {
     height: 35px;
     width: 60px;
-    right: 0;
+    right: 140px;
+}
+
+label {
+    width: 100%;
 }
 
 .navBar {
@@ -49,6 +49,7 @@ input {
     gap: 10px;
     justify-content: end;
     margin: 20px 60px 0 0;
+    position: relative;
 }
 
 .navBar__item > a, #label_1 {
@@ -141,8 +142,4 @@ a:focus,
     outline: 2px black solid;
     border-radius: 1px;
     position: relative;
-}
-
-label {
-    width: 100%;
 }
