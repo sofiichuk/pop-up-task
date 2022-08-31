@@ -33,6 +33,7 @@ input {
 }
 
 #input_1 {
+    position: absolute;
     height: 35px;
     width: 60px;
     right: 140px;
@@ -70,7 +71,7 @@ label {
 #input_1:checked ~ .dropdownMenu > ul {
     max-height: 500px;
     top: 30px;
-    right: -120px;
+    right: 20px;
     gap: 30px;
     margin: 15px;
     padding: 15px;
@@ -85,18 +86,13 @@ label {
 #input_2 {
     height: 20px;
     width: 240px;
-    right: 0;
+    left: 15px;
 }
 
-.showMoreButton:focus {
-    tab-index: 0;
-}
-
-.label_2:before {
+#label_2:before {
     content: "More";
     color: #4f4f4f;
     font-family: sans-serif;
-    bottom: 0;
     width: 240px;
     display: block;
     grid-column: span 3;
@@ -104,6 +100,7 @@ label {
     height: 20px;
     line-height: 20px;
     cursor: pointer;
+    position: absolute;
 }
 
 .showMoreButton {
@@ -112,13 +109,13 @@ label {
     height: 20px;
 }
 
-#input_2:checked + .label_2, #input_2 {
-    display: none;
+#input_2:checked + #label_2, #input_2:checked {
+    opacity: 0;
     cursor: none;
 }
 
 .dropdownMenu__collapsiblePart {
-    max-height: 0;
+    max-height: 20px;
     display: none;
 }
 
@@ -130,15 +127,12 @@ label {
     grid-template-rows: repeat(2, 40px);
 }
 
-a:hover,
-label:hover {
+a:hover {
     outline: 1px black solid;
     position: relative;
 }
 
-a:focus,
-.item_btn:focus,
-.showMoreButton:focus-visible {
+a:focus {
     outline: 2px black solid;
     border-radius: 1px;
     position: relative;
