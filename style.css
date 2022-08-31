@@ -128,7 +128,7 @@ label:hover { outline: 1px black solid;
 
 a:focus,
 .item_btn:focus,
-.showMoreButton:focus-visible{ outline: 3px red solid;
+.showMoreButton:focus-visible{ outline: 2px black solid;
     position: relative;
 }
 
